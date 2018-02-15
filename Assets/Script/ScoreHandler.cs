@@ -25,7 +25,7 @@ public class ScoreHandler : MonoBehaviour {
 			timeToReset += Time.deltaTime;
 		}
 
-		if (timeToReset > 10.0f)
-			Application.LoadLevel (Application.loadedLevel);
+//		if (timeToReset > 10.0f)
+//			Application.LoadLevel (Application.loadedLevel);
 	}
 }
