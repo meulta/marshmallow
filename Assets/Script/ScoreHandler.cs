@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScoreHandler : MonoBehaviour {
 	public Text scoretext;
@@ -25,7 +26,11 @@ public class ScoreHandler : MonoBehaviour {
 			timeToReset += Time.deltaTime;
 		}
 
-//		if (timeToReset > 10.0f)
-//			Application.LoadLevel (Application.loadedLevel);
+		if (timeToReset > 10.0f)
+        {
+            points = 0;
+            isGameOver = false;
+            SceneManager.LoadScene(sceneName: "LEVEL 1");
+        }
 	}
 }
