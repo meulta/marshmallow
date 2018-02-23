@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "marshmallow", "marshmallow.csproj", "{31D352D6-3CB9-321F-1A9C-45C5F9927114}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "marshmallow.Editor", "marshmallow.Editor.csproj", "{0A8FD112-FC0C-B654-18A5-F7FE54FB5446}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31D352D6-3CB9-321F-1A9C-45C5F9927114}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31D352D6-3CB9-321F-1A9C-45C5F9927114}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31D352D6-3CB9-321F-1A9C-45C5F9927114}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31D352D6-3CB9-321F-1A9C-45C5F9927114}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A8FD112-FC0C-B654-18A5-F7FE54FB5446}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A8FD112-FC0C-B654-18A5-F7FE54FB5446}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A8FD112-FC0C-B654-18A5-F7FE54FB5446}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A8FD112-FC0C-B654-18A5-F7FE54FB5446}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

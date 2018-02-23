@@ -1,30 +1,34 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.XR.WSA.Input;
+using HoloToolkit.Unity.InputModule;
 
+public class projectileshooter : MonoBehaviour
+{
+    GameObject prefab;
 
+    void Start()
+    {
+        prefab = Resources.Load("projectile") as GameObject;
 
-public class projectileshooter : MonoBehaviour {
+        InteractionManager.InteractionSourcePressed += InteractionSourcePressed;
+    }
 
-	GameObject prefab;
+    private void InteractionSourcePressed(InteractionSourcePressedEventArgs obj)
+    {
+        if (obj.pressType == InteractionSourcePressType.Select)
+        {
+            Vector3 direction;
+            Vector3 startposition;
 
-	void Start () {
-		prefab = Resources.Load ("projectile") as GameObject;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if (Input.GetMouseButtonDown (0)) {
-			GameObject projectile = Instantiate (prefab) as GameObject;
-			projectile.transform.position = transform.position + Camera.main.transform.forward * 2;
-			Rigidbody rb = projectile.GetComponent<Rigidbody> ();
-			rb.velocity = Camera.main.transform.forward * 40;
-		}
+            obj.state.sourcePose.TryGetForward(out direction);
+            obj.state.sourcePose.TryGetPosition(out startposition);
+           
+            GameObject projectile = Instantiate(prefab, transform.parent.parent) as GameObject;
+            projectile.transform.localPosition = startposition;
 
-
-		}
-
-
-	}
-
-    
-
+            Rigidbody rb = projectile.GetComponent<Rigidbody>();
+            rb.velocity = direction * 40;
+        }
+    }
+}

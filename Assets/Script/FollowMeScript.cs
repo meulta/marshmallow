@@ -12,18 +12,20 @@ public class FollowMeScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (target != null) {
-			this.transform.LookAt (new Vector3 (target.position.x, this.transform.position.y, target.position.z));
-			this.transform.position += this.transform.forward * Time.deltaTime * speed;
-		}
-	}
+        if (target != null)
+        {
+            this.transform.LookAt(new Vector3(target.position.x, this.transform.position.y, target.position.z));
+            this.transform.position += this.transform.forward * Time.deltaTime * speed;
+        }
+    }
 
 	void OnCollisionEnter(Collision other)
 	{
 		Debug.Log (other.gameObject.tag);
-		if (other.gameObject.tag == "Projectile") {
-			Destroy (this.gameObject);
-		}
-	}
+        if (other.gameObject.tag == "Projectile")
+        {
+            Destroy(this.gameObject);
+        }
+    }
 		
 }

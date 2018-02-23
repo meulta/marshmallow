@@ -20,6 +20,7 @@ public class CharacterMovment : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
 	    if(Input.GetKey(KeyCode.W))
         {
             transform.position += transform.forward * Time.deltaTime * speed;
